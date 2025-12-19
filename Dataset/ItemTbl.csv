@@ -1,0 +1,636 @@
+ItemID,ItemName
+1001,Boots
+1004,Faerie Charm
+1006,Rejuvenation Bead
+1011,Giant's Belt
+1018,Cloak of Agility
+1026,Blasting Wand
+1027,Sapphire Crystal
+1028,Ruby Crystal
+1029,Cloth Armor
+1031,Chain Vest
+1033,Null-Magic Mantle
+1035,Emberknife
+1036,Long Sword
+1037,Pickaxe
+1038,B. F. Sword
+1039,Hailblade
+1040,Obsidian Edge
+1042,Dagger
+1043,Recurve Bow
+1052,Amplifying Tome
+1053,Vampiric Scepter
+1054,Doran's Shield
+1055,Doran's Blade
+1056,Doran's Ring
+1057,Negatron Cloak
+1058,Needlessly Large Rod
+1082,Dark Seal
+1083,Cull
+1101,Scorchclaw Pup
+1102,Gustwalker Hatchling
+1103,Mosstomper Seedling
+1104,Eye of the Herald
+1105,Mosstomper Seedling
+1106,Gustwalker Hatchling
+1107,Scorchclaw Pup
+1500,Penetrating Bullets
+1501,Fortification
+1502,Reinforced Armor
+1503,Warden's Eye
+1504,Vanguard
+1506,Reinforced Armor
+1507,Overcharged
+1508,Anti-tower Socks
+1509,Gusto
+1510,Phreakish Gusto
+1511,Super Mech Armor
+1512,Super Mech Power Field
+1515,Turret Plating
+1516,Structure Bounty
+1517,Structure Bounty
+1518,Structure Bounty
+1519,Structure Bounty
+1520,OvererchargedHA
+1521,Fortification
+1522,Tower Power-Up
+1523,Overcharged
+2003,Health Potion
+2010,Total Biscuit of Everlasting Will
+2015,Kircheis Shard
+2019,Steel Sigil
+2020,The Brutalizer
+2021,Tunneler
+2022,Glowing Mote
+2031,Refillable Potion
+2033,Corrupting Potion
+2049,Guardian's Amulet
+2050,Guardian's Shroud
+2051,Guardian's Horn
+2052,Poro-Snax
+2055,Control Ward
+2056,Stealth Ward
+2065,Shurelya's Battlesong
+2138,Elixir of Iron
+2139,Elixir of Sorcery
+2140,Elixir of Wrath
+2141,Cappa Juice
+2142,Juice of Power
+2143,Juice of Vitality
+2144,Juice of Haste
+2145,Lucky Dice
+2146,Enhanced Lucky Dice
+2150,Elixir of Skill
+2151,Elixir of Avarice
+2152,Elixir of Force
+2161,Bandle Juice of Power
+2162,Bandle Juice of Vitality
+2163,Bandle Juice of Haste
+2403,Minion Dematerializer
+2420,Seeker's Armguard
+2421,Shattered Armguard
+2422,Slightly Magical Footwear
+2501,Overlord's Bloodmail
+2502,Unending Despair
+2503,Blackfire Torch
+2504,Kaenic Rookern
+2508,Fated Ashes
+3001,Evenshroud
+3002,Trailblazer
+3003,Archangel's Staff
+3004,Manamune
+3005,Ghostcrawlers
+3006,Berserker's Greaves
+3009,Boots of Swiftness
+3010,Symbiotic Soles
+3011,Chemtech Putrifier
+3012,Chalice of Blessing
+3013,Synchronized Souls
+3020,Sorcerer's Shoes
+3023,Lifewell Pendant
+3024,Glacial Buckler
+3026,Guardian Angel
+3031,Infinity Edge
+3032,Yun Tal Wildarrows
+3033,Mortal Reminder
+3035,Last Whisper
+3036,Lord Dominik's Regards
+3039,Atma's Reckoning
+3040,Seraph's Embrace
+3041,Mejai's Soulstealer
+3042,Muramana
+3044,Phage
+3046,Phantom Dancer
+3047,Plated Steelcaps
+3050,Zeke's Convergence
+3051,Hearthbound Axe
+3053,Sterak's Gage
+3057,Sheen
+3065,Spirit Visage
+3066,Winged Moonplate
+3067,Kindlegem
+3068,Sunfire Aegis
+3070,Tear of the Goddess
+3071,Black Cleaver
+3072,Bloodthirster
+3073,Experimental Hexplate
+3074,Ravenous Hydra
+3075,Thornmail
+3076,Bramble Vest
+3077,Tiamat
+3078,Trinity Force
+3082,Warden's Mail
+3083,Warmog's Armor
+3084,Heartsteel
+3085,Runaan's Hurricane
+3086,Zeal
+3087,Statikk Shiv
+3089,Rabadon's Deathcap
+3091,Wit's End
+3094,Rapid Firecannon
+3095,Stormrazor
+3100,Lich Bane
+3102,Banshee's Veil
+3105,Aegis of the Legion
+3107,Redemption
+3108,Fiendish Codex
+3109,Knight's Vow
+3110,Frozen Heart
+3111,Mercury's Treads
+3112,Guardian's Orb
+3113,Aether Wisp
+3114,Forbidden Idol
+3115,Nashor's Tooth
+3116,Rylai's Crystal Scepter
+3117,Mobility Boots
+3118,Malignance
+3119,Winter's Approach
+3121,Fimbulwinter
+3123,Executioner's Calling
+3124,Guinsoo's Rageblade
+3128,Deathfire Grasp
+3131,Sword of the Divine
+3133,Caulfield's Warhammer
+3134,Serrated Dirk
+3135,Void Staff
+3137,Cryptbloom
+3139,Mercurial Scimitar
+3140,Quicksilver Sash
+3142,Youmuu's Ghostblade
+3143,Randuin's Omen
+3144,Scout's Slingshot
+3145,Hextech Alternator
+3146,Hextech Gunblade
+3147,Haunting Guise
+3152,Hextech Rocketbelt
+3153,Blade of The Ruined King
+3155,Hexdrinker
+3156,Maw of Malmortius
+3157,Zhonya's Hourglass
+3158,Ionian Boots of Lucidity
+3161,Spear of Shojin
+3165,Morellonomicon
+3170,Swiftmarch
+3171,Crimson Lucidity
+3172,Gunmetal Greaves
+3173,Chainlaced Crushers
+3174,Armored Advance
+3175,Spellslinger's Shoes
+3176,Forever Forward
+3177,Guardian's Blade
+3179,Umbral Glaive
+3181,Hullbreaker
+3184,Guardian's Hammer
+3190,Locket of the Iron Solari
+3193,Gargoyle Stoneplate
+3211,Spectre's Cowl
+3222,Mikael's Blessing
+3302,Terminus
+3330,Scarecrow Effigy
+3340,Stealth Ward
+3348,Arcane Sweeper
+3349,Lucent Singularity
+3363,Farsight Alteration
+3364,Oracle Lens
+3398,Small Party Favor
+3399,Party Favor
+3400,Your Cut
+3430,Rite Of Ruin
+3504,Ardent Censer
+3508,Essence Reaver
+3513,Eye of the Herald
+3599,Kalista's Black Spear
+3600,Kalista's Black Spear
+3742,Dead Man's Plate
+3748,Titanic Hydra
+3801,Crystalline Bracer
+3802,Lost Chapter
+3803,Catalyst of Aeons
+3814,Edge of Night
+3850,Spellthief's Edge
+3851,Frostfang
+3853,Shard of True Ice
+3854,Steel Shoulderguards
+3855,Runesteel Spaulders
+3857,Pauldrons of Whiterock
+3858,Relic Shield
+3859,Targon's Buckler
+3860,Bulwark of the Mountain
+3862,Spectral Sickle
+3863,Harrowing Crescent
+3864,Black Mist Scythe
+3865,World Atlas
+3866,Runic Compass
+3867,Bounty of Worlds
+3869,Celestial Opposition
+3870,Dream Maker
+3871,Zaz'Zak's Realmspike
+3876,Solstice Sleigh
+3877,Bloodsong
+3901,<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>
+3902,<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>
+3903,<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>
+3916,Oblivion Orb
+4003,Lifeline
+4004,Spectral Cutlass
+4005,Imperial Mandate
+4010,Bloodletter's Curse
+4011,Sword of Blossoming Dawn
+4012,Sin Eater
+4013,Lightning Braid
+4014,Frozen Mallet
+4015,Perplexity
+4016,Wordless Promise
+4017,Hellfire Hatchet
+4401,Force of Nature
+4402,Innervating Locket
+4403,The Golden Spatula
+4628,Horizon Focus
+4629,Cosmic Drive
+4630,Blighting Jewel
+4632,Verdant Barrier
+4633,Riftmaker
+4635,Leeching Leer
+4636,Night Harvester
+4637,Demonic Embrace
+4638,Watchful Wardstone
+4641,Stirring Wardstone
+4642,Bandleglass Mirror
+4643,Vigilant Wardstone
+4644,Crown of the Shattered Queen
+4645,Shadowflame
+4646,Stormsurge
+6029,Ironspike Whip
+6035,Silvermere Dawn
+6333,Death's Dance
+6609,Chempunk Chainsword
+6610,Sundered Sky
+6616,Staff of Flowing Water
+6617,Moonstone Renewer
+6620,Echoes of Helia
+6621,Dawncore
+6630,Goredrinker
+6631,Stridebreaker
+6632,Divine Sunderer
+6653,Liandry's Torment
+6655,Luden's Companion
+6656,Everfrost
+6657,Rod of Ages
+6660,Bami's Cinder
+6662,Iceborn Gauntlet
+6664,Hollow Radiance
+6665,"Jak'Sho, The Protean"
+6667,Radiant Virtue
+6670,Noonquiver
+6671,Galeforce
+6672,Kraken Slayer
+6673,Immortal Shieldbow
+6675,Navori Flickerblade
+6676,The Collector
+6677,Rageknife
+6690,Rectrix
+6691,Duskblade of Draktharr
+6692,Eclipse
+6693,Prowler's Claw
+6694,Serylda's Grudge
+6695,Serpent's Fang
+6696,Axiom Arc
+6697,Hubris
+6698,Profane Hydra
+6699,Voltaic Cyclosword
+6700,Shield of the Rakkor
+6701,Opportunity
+6702,Scouting Ahead
+7050,Gangplank Placeholder
+8001,Anathema's Chains
+8010,Bloodletter's Curse
+8020,Abyssal Mask
+9168,Locked Weapon Slot
+9171,Cyclonic Slicers
+9172,YuumiBot
+9173,Radiant Field
+9174,Statikk Sword
+9175,Lioness's Lament
+9176,Gatling Bunny-Guns
+9177,Searing Shortbow
+9178,The Annihilator
+9179,Battle Bunny Crossbow
+9180,UwU Blaster
+9181,Vortex Glove
+9183,Blade-o-rang
+9184,Bunny Mega-Blast
+9185,Anti-Shark Sea Mine
+9187,T.I.B.B.E.R.S
+9188,Ani-Mines
+9189,Final City Transit
+9190,Echoing Batblades
+9192,Paw Print Poisoner
+9193,Iceblast Armor
+9271,Unceasing Cyclone
+9272,YuumiBot_Final_FINAL
+9273,Explosive Embrace
+9274,Prumbis's Electrocarver
+9275,Enveloping Light
+9276,Double Bun-Bun Barrage
+9277,Evolved Embershot
+9278,Animapocalypse
+9279,Bunny Prime Ballista
+9280,OwO Blaster
+9281,Tempest's Gauntlet
+9283,Quad-o-rang
+9284,Rapid Rabbit Raindown
+9285,Neverending Mobstomper
+9287,T.I.B.B.E.R.S (B.E.E.G Edition)
+9288,Jinx's Tri-Namite
+9289,FC Limited Express
+9290,Vayne's Chromablades
+9292,Bearfoot Chem-Dispenser
+9293,Deep Freeze
+9300,Meow Meow
+9301,Shield Slam
+9302,Sound Wave
+9303,Pillory Swipe
+9304,Steel Tempest
+9305,Tentacle Slam
+9306,Winged Dagger
+9307,Guiding Hex
+9308,Bunny Hop
+9400,Battle Cat Barrage
+9401,Light of the Lion
+9402,Anima Echo
+9403,Savage Slice
+9404,Wandering Storms
+9405,Grizzly Smash
+9406,Lover's Ricochet
+9407,Hopped-Up Hex
+9408,Carrot Crash
+126697,Hubris
+220000,Stat Bonus
+220001,Legendary Fighter Item
+220002,Legendary Marksman Item
+220003,Legendary Assassin Item
+220004,Legendary Mage Item
+220005,Legendary Tank Item
+220006,Legendary Support Item
+220007,Prismatic Item
+220008,Anvil Voucher
+220009,Gold Stat Anvil Voucher
+220010,Prismatic Stat Voucher
+220011,Bravery Voucher
+221011,Giant's Belt
+221026,Blasting Wand
+221031,Chain Vest
+221038,B. F. Sword
+221043,Recurve Bow
+221053,Vampiric Scepter
+221057,Negatron Cloak
+221058,Needlessly Large Rod
+222022,Glowing Mote
+222051,Guardian's Horn
+222065,Shurelya's Battlesong
+222141,Cappa Juice
+222502,Unending Despair
+222503,Blackfire Torch
+222504,Kaenic Rookern
+223001,Evenshroud
+223002,Trailblazer
+223003,Archangel's Staff
+223004,Manamune
+223005,Ghostcrawlers
+223006,Berserker's Greaves
+223009,Boots of Swiftness
+223011,Chemtech Putrifier
+223020,Sorcerer's Shoes
+223026,Guardian Angel
+223031,Infinity Edge
+223032,Yun Tal Wildarrows
+223033,Mortal Reminder
+223036,Lord Dominik's Regards
+223039,Atma's Reckoning
+223040,Seraph's Embrace
+223042,Muramana
+223046,Phantom Dancer
+223047,Plated Steelcaps
+223050,Zeke's Convergence
+223053,Sterak's Gage
+223057,Sheen
+223065,Spirit Visage
+223067,Kindlegem
+223068,Sunfire Aegis
+223071,Black Cleaver
+223072,Bloodthirster
+223073,Experimental Hexplate
+223074,Ravenous Hydra
+223075,Thornmail
+223078,Trinity Force
+223084,Heartsteel
+223085,Runaan's Hurricane
+223087,Statikk Shiv
+223089,Rabadon's Deathcap
+223091,Wit's End
+223094,Rapid Firecannon
+223095,Stormrazor
+223100,Lich Bane
+223102,Banshee's Veil
+223105,Aegis of the Legion
+223107,Redemption
+223109,Knight's Vow
+223110,Frozen Heart
+223111,Mercury's Treads
+223112,Guardian's Orb
+223115,Nashor's Tooth
+223116,Rylai's Crystal Scepter
+223118,Malignance
+223119,Winter's Approach
+223121,Fimbulwinter
+223124,Guinsoo's Rageblade
+223135,Void Staff
+223137,Cryptbloom
+223139,Mercurial Scimitar
+223142,Youmuu's Ghostblade
+223143,Randuin's Omen
+223146,Hextech Gunblade
+223152,Hextech Rocketbelt
+223153,Blade of The Ruined King
+223156,Maw of Malmortius
+223157,Zhonya's Hourglass
+223158,Ionian Boots of Lucidity
+223161,Spear of Shojin
+223165,Morellonomicon
+223172,Zephyr
+223177,Guardian's Blade
+223181,Hullbreaker
+223184,Guardian's Hammer
+223185,Guardian's Dirk
+223190,Locket of the Iron Solari
+223193,Gargoyle Stoneplate
+223222,Mikael's Blessing
+223302,Terminus
+223504,Ardent Censer
+223508,Essence Reaver
+223742,Dead Man's Plate
+223748,Titanic Hydra
+223814,Edge of Night
+224004,Spectral Cutlass
+224005,Imperial Mandate
+224401,Force of Nature
+224403,The Golden Spatula
+224628,Horizon Focus
+224629,Cosmic Drive
+224633,Riftmaker
+224636,Night Harvester
+224637,Demonic Embrace
+224644,Crown of the Shattered Queen
+224645,Shadowflame
+224646,Stormsurge
+226035,Silvermere Dawn
+226333,Death's Dance
+226609,Chempunk Chainsword
+226610,Sundered Sky
+226616,Staff of Flowing Water
+226617,Moonstone Renewer
+226620,Echoes of Helia
+226621,Dawncore
+226630,Goredrinker
+226631,Stridebreaker
+226632,Divine Sunderer
+226653,Liandry's Anguish
+226655,Luden's Companion
+226656,Everfrost
+226657,Rod of Ages
+226662,Iceborn Gauntlet
+226664,Hollow Radiance
+226665,"Jak'Sho, The Protean"
+226667,Radiant Virtue
+226671,Galeforce
+226672,Kraken Slayer
+226673,Immortal Shieldbow
+226675,Navori Flickerblades
+226676,The Collector
+226691,Duskblade of Draktharr
+226692,Eclipse
+226693,Prowler's Claw
+226694,Serylda's Grudge
+226695,Serpent's Fang
+226696,Axiom Arc
+226697,Hubris
+226698,Profane Hydra
+226699,Voltaic Cyclosword
+226701,Opportunity
+228001,Anathema's Chains
+228002,Wooglet's Witchcap
+228003,Deathblade
+228004,Adaptive Helm
+228005,Obsidian Cleaver
+228006,Sanguine Blade
+228008,Runeglaive
+228020,Abyssal Mask
+322065,Shurelya's Battlesong
+323002,Trailblazer
+323003,Archangel's Staff
+323004,Manamune
+323040,Seraph's Embrace
+323042,Muramana
+323050,Zeke's Convergence
+323070,Tear of the Goddess
+323075,Thornmail
+323107,Redemption
+323109,Knight's Vow
+323110,Frozen Heart
+323119,Winter's Approach
+323121,Fimbulwinter
+323190,Locket of the Iron Solari
+323222,Mikael's Blessing
+323504,Ardent Censer
+324005,Imperial Mandate
+326616,Staff of Flowing Water
+326617,Moonstone Renewer
+326620,Echoes of Helia
+326621,Dawncore
+326657,Rod of Ages
+328020,Abyssal Mask
+443054,Darksteel Talons
+443055,Fulmination
+443056,Demon King's Crown
+443058,Shield of Molten Stone
+443059,Cloak of Starry Night
+443060,Sword of the Divine
+443061,Force Of Entropy
+443062,Sanguine Gift
+443063,Eleisa's Miracle
+443064,Talisman Of Ascension
+443069,Hamstringer
+443079,Turbo Chemtank
+443080,Twin Mask
+443081,Hexbolt Companion
+443083,Warmog's Armor
+443090,Reaper's Toll
+443193,Gargoyle Stoneplate
+444636,Night Harvester
+444637,Demonic Embrace
+444644,Crown of the Shattered Queen
+446632,Divine Sunderer
+446656,Everfrost
+446667,Radiant Virtue
+446671,Galeforce
+446691,Duskblade of Draktharr
+446693,Prowler's Claw
+447100,Mirage Blade
+447101,Gambler's Blade
+447102,Reality Fracture
+447103,Hemomancer's Helm
+447104,Innervating Locket
+447105,Empyrean Promise
+447106,Dragonheart
+447107,Decapitator
+447108,Runecarver
+447109,Cruelty
+447110,Moonflair Spellblade
+447111,Overlord's Bloodmail
+447112,Flesheater
+447113,Detonation Orb
+447114,Reverberation
+447115,Regicide
+447116,Kinkou Jitte
+447118,Pyromancer's Cloak
+447119,Lightning Rod
+447120,Diamond-Tipped Spear
+447121,Twilight's Edge
+447122,Black Hole Gauntlet
+447123,Puppeteer
+663039,Atma's Reckoning
+663056,Demon King's Crown
+663058,Shield of Molten Stone
+663059,Cloak of Starry Night
+663060,Sword of the Divine
+663064,Veigar's Talisman of Ascension
+663146,Hextech Gunblade
+663172,Zephyr
+663193,Gargoyle Stoneplate
+664011,Sword of Blossoming Dawn
+664403,The Golden Spatula
+664644,Crown of the Shattered Queen
+667101,Gambler's Blade
+667109,Cruelty
+667112,Flesheater
+667666,The Collector
