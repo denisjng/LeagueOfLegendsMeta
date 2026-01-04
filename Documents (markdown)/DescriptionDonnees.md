@@ -33,6 +33,7 @@ Table de référence contenant la liste de **tous les champions jouables** dans 
 |---------|------|-------------|---------|-----------------|
 | **ChampionId** | Numérique (Entier) | Identifiant unique du champion dans le système Riot Games | `0`, `1`, `2`, ... | L'ID `0` représente "No Champion" (aucun champion sélectionné). C'est la clé primaire du tableau. |
 | **ChampionName** | Texte (String) | Nom du champion tel qu'affiché en jeu | `Annie`, `Olaf`, `Galio`, `TwistedFate` | Noms sans espaces avec capitalisation particulière (CamelCase pour les noms composés). Utilisé à titre informatif. |
+| **ChampionLane** | Texte (String) | Rôle ou voie principale du champion | `MID`, `JUNGLE`, `TOP`, `BOTTOM`, `SUPPORT`, `NONE` | Indique la lane principale du champion. `NONE` pour "No Champion". |
 
 ### Observations Clés
 - Le champion avec ID `0` ("No Champion") est un enregistrement spécial utilisé pour les matchs ARAM ou pour indiquer l'absence de champion

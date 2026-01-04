@@ -20,13 +20,11 @@ Objectif global : transformer les données brutes en recommandations actionnable
 - Questions : quels champions gagnent le plus par rank, lane, durée ?
 - Data Scientist (DS) — étapes
 	- Calculer winrate par champion, contrôlé par lane et rank.
-	- Analyser par quantiles de durée (courte <20min, standard 20-30, longue >30).
-	- Visualiser distributions (barres, violons) et écarts de winrate entre ranks (Unranked → Challenger).
 	- Détecter sur/sous-performance : champions dont le winrate est > moyenne + écart-type par lane/rank.
 - Expert ML — étapes
 	- Encodage champion (one-hot ou target encoding contrôlé par CV stratifiée par patch).
 	- Modèle de base : régression logistique pour obtention des odds ratios par champion.
-	- Modèle non linéaire : Gradient Boosting/Random Forest pour interactions champion × lane × rank.
+	- Modèle non linéaire : Gradient Boosting/Random Forest pour interactions champion × rank.
 	- Importance globale (SHAP) pour quantifier l’effet réel du choix du champion sur la probabilité de victoire.
 
 ### 2. Impact des items
