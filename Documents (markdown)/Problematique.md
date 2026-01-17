@@ -1,4 +1,6 @@
-# Problématique générale
+# League of Legends Meta Analysis - Machine Learning
+
+## Problématique générale
 
 ---
 
@@ -8,246 +10,112 @@ Cette problématique vise à **comprendre**, **quantifier** et **modéliser** le
 
 ---
 
-## I. Compréhension de la méta actuelle
+## Phase 0 — Préparation et Qualité des Données
 
-**_Identifier ce qui gagne le plus dans les données_**
+Pourquoi cette phase est cruciale :
+- La qualité des données impacte directement la fiabilité des modèles
+- Un nettoyage rigoureux évite les biais et erreurs de prédiction
 
-### 1. Analyse de l'efficacité des champions
+Objectifs de la phase :
+1. Rassembler et contrôler : Charger tous les fichiers CSV du dataset
+2. Nettoyer : Gérer valeurs manquantes, données corrompues etc.
+3. Échantillonner : Conserver uniquement les modes CLASSIC et ARAM (exclure les autres)
 
-#### Question de recherche
+Tâches typiques :
+- Identification et traitement des valeurs manquantes
+- Validation des clés étrangères (ChampionId, ItemId, MatchId)
+- Détection d'anomalies (runes à 0, sorts d'invocateur à 0, items invalides)
+- Création d'une version "clean" des tables pour analyses ultérieures
+- Segmentation et création de splits train/test (ex : 80/20 par patch ou split stratifié)
+
+---
+
+# Phase I — Compréhension de la méta actuelle (ce qui gagne)
+
+Objectif :
+- Identifier les champions et items qui contribuent le plus aux victoires, par contexte (lane, rank, durée, patch)
+
+I.1 — Efficacité des champions
+
+Question de recherche
 > Quels champions présentent les meilleurs taux de victoire en fonction du rank, de la lane et de la durée de la partie ?
 
-#### Approche Data Scientist
+Actions proposées :
+- Calcul des taux de victoire par champion
+- Analyses croisées : Champion × Lane, Champion × Champion adverse
+- Visualisation et comparaison des distributions
+- Identification de tendances fortes et de champions surperformants
 
-- **Calcul des taux de victoire par champion**
-- **Analyses croisées :**
-  - Champion × Rank
-  - Champion × Lane
-  - Champion × Durée de partie
-- **Visualisation et comparaison des distributions**
-- **Identification de tendances fortes et de champions surperformants**
+Objectif :
+> Mettre en évidence les champions dominants de la méta
 
-**Objectif :**
-> Mettre en évidence les champions dominants de la méta et observer les différences de performance entre bas et haut niveau de jeu.
-
-#### Approche Expert IA / Machine Learning
-
-- **Encodage du champion** comme variable explicative
-- **Intégration du champion** dans un modèle prédictif
-- **Mesure de son poids relatif** dans la prédiction de la victoire
-
-**Objectif :**
-> Quantifier l'impact réel du choix du champion sur la probabilité de victoire.
+I.2 — Détection sur/sous-performance par lane et par rank
+- Détection des sur- et sous-performers en comparant winrates par champion vs moyenne de la lane et par rank
+- Filtrage par nombre minimal de matchs pour garantir la robustesse
 
 ---
 
-### 2. Analyse de l'impact des items
+## Phase II — Optimisation du champion (builds & items)
 
-#### Question de recherche
-> Quels items sont le plus fréquemment associés aux victoires, et dans quels contextes ?
+Objectif :
+- Jouer un champion de manière optimale selon les données
 
-#### Approche Data Scientist
+Identification des builds optimaux
 
-- **Analyse de fréquence** des items en cas de victoire et de défaite
-- **Identification des items « core »** par lane
-- **Étude des items situationnels** associés à un taux de victoire élevé
-- **Comparaison statistique** entre builds gagnants et perdants
+Question de recherche
+> Quels items sont le plus fréquemment associés aux victoires ?
 
-**Objectif :**
-> Comprendre quels choix d'items sont corrélés à une augmentation des chances de victoire.
+Approches :
+- Identification des items « core » par champion (ex : item présent dans ≥50% des victoires)
+- Étude des items situationnels associés à un taux de victoire élevé
+- Construction de "build_key" / "build_str" et agrégation sur les parties gagnées
 
-#### Approche Expert IA / Machine Learning
-
-- **Transformation des items** en variables binaires ou catégorielles
-- **Intégration des items** comme features du modèle
-- **Analyse de l'importance** des items dans la prédiction
-
-**Objectif :**
-> Déterminer quels items contribuent le plus à la performance prédictive du modèle.
-
----
-
-## II. Optimisation du champion
-
-**_Jouer un champion de manière optimale selon les données_**
-
-### 3. Identification des builds optimaux
-
-#### Question de recherche
-> Existe-t-il des builds d'items optimaux pour chaque champion selon le contexte de la partie ?
-
-#### Approche Data Scientist
-
-- **Regroupement des builds** par champion
-- **Clustering des builds** associés aux victoires
-- **Comparaison des builds** gagnants et perdants
-- **Analyse du lien** entre build et durée de la partie
-
-**Objectif :**
-> Mettre en évidence des builds efficaces et identifier des choix d'items à éviter.
-
-#### Approche Expert IA / Machine Learning
-
-- **Modélisation de la victoire** à partir des builds
-- **Apprentissage de combinaisons d'items** performantes
-- **Simulation de scénarios** de builds
-
-**Objectif :**
+Objectif :
 > Apprendre automatiquement les configurations d'items les plus favorables à la victoire.
 
 ---
 
-### 4. Importance des performances mécaniques
+## Phase II.b — Modélisation de la victoire (ML explicatif et prédictif)
 
-#### Question de recherche
-> La victoire dépend-elle davantage du champion joué ou des performances individuelles du joueur ?
+Objectif :
+- Formaliser la relation entre plusieurs variables et l’issue d’une partie
 
-**Variables étudiées :**
-
-| Variable | Description |
-|----------|-------------|
-| **Gold** | Quantité d'or accumulée |
-| **CS** | Creep Score (sbires tués) |
-| **Dégâts infligés** | Dommages causés aux ennemis |
-| **Dégâts subis** | Dommages reçus |
-
-#### Approche Data Scientist
-
-- **Analyse de corrélation** entre performances et victoire
-- **Comparaison des performances moyennes** entre gagnants et perdants
-- **Études statistiques** contrôlées par champion
-
-**Objectif :**
-> Comprendre le poids des performances individuelles indépendamment du champion.
-
-#### Approche Expert IA / Machine Learning
-
-- **Modèles intégrant** à la fois champion et statistiques de performance
-- **Analyse de l'importance relative** des variables
-- **Comparaison de modèles** avec et sans variables mécaniques
-
-**Objectif :**
-> Mesurer quantitativement si le skill ou le choix du champion est plus déterminant.
-
----
-
-## III. Draft et contre-stratégies
-
-**_Gagner avant même le début de la partie_**
-
-### 5. Identification des counter-picks
-
-#### Question de recherche
-> Quels champions réduisent significativement le taux de victoire d'un champion donné ?
-
-#### Approche Data Scientist
-
-- **Analyse des matchups** fréquents
-- **Calcul des winrates** champion contre champion
-- **Étude des différences** selon la lane
-
-**Objectif :**
-> Construire des tableaux de counters et identifier les matchups défavorables.
-
-#### Approche Expert IA / Machine Learning
-
-- **Modélisation des interactions** entre champions
-- **Apprentissage des combinaisons** de champions perdantes
-- **Estimation de l'impact** d'un matchup sur la victoire
-
-**Objectif :**
-> Automatiser la détection des contre-picks les plus pénalisants.
-
----
-
-### 6. Détermination des champions à bannir
-
-#### Question de recherche
-> Quels champions représentent la plus grande menace face à un champion spécifique ?
-
-#### Approche Data Scientist
-
-**Identification des champions :**
-- À **fort taux de victoire**
-- **Dominants** sur plusieurs matchups
-- **Très présents** dans une lane
-- **Analyse combinée** winrate + fréquence
-
-**Objectif :**
-> Hiérarchiser les menaces principales pour un champion donné.
-
-#### Approche Expert IA / Machine Learning
-
-- **Simulation de scénarios** avec ou sans certains champions
-- **Évaluation de la baisse** de probabilité de victoire
-- **Recommandation automatique** de bans
-
-**Objectif :**
-> Proposer une stratégie de bannissement basée sur les données.
-
----
-
-## IV. Stratégies globales de victoire
-
-**_Comprendre ce qui fait réellement gagner une partie_**
-
-### 7. Identification des facteurs clés de victoire
-
-#### Question de recherche
-> Quels facteurs influencent le plus la probabilité de victoire ?
-
-**Facteurs étudiés :**
-
-| Facteur | Type |
-|---------|------|
-| **Champion** | Catégoriel |
-| **Items** | Catégoriel/Binaire |
-| **Gold** | Numérique |
-| **Dégâts** | Numérique |
-| **CS** | Numérique |
-| **Durée de la partie** | Numérique |
-
-#### Approche Data Scientist
-
-- **Analyse multivariée**
-- **Comparaison des distributions**
-- **Interprétation des relations** entre variables
-
-**Objectif :**
-> Hiérarchiser les éléments déterminants de la victoire.
-
-#### Approche Expert IA / Machine Learning
-
-- **Régression logistique**
-- **Random Forest**
-- **Analyse de l'importance des variables** (feature importance)
-
-**Objectif :**
-> Obtenir un classement quantifié des facteurs de victoire.
-
----
-
-### 8. Prédiction de l'issue d'une partie
-
-#### Question de recherche
+Question de recherche
 > Peut-on prédire l'issue d'une partie à partir des choix stratégiques et des statistiques de jeu ?
 
-#### Approche Data Scientist
+Approches Data Scientist :
+- Préparation et nettoyage des données
+- Séparation des jeux d'entraînement et de test
+- Modèles : Régression logistique (interprétable), Random Forest / autres arbres (non linéaires)
+- Évaluation : accuracy, AUC, classification report
 
-- **Préparation et nettoyage** des données
-- **Séparation des jeux** d'entraînement et de test
-- **Analyse des performances** du modèle
+Approche Expert IA / Machine Learning :
+- Régression logistique pour interprétation des coefficients (features standardisées)
+- Random Forest (ou Gradient Boosting) pour robustesse et importances des variables
+- Analyse de l'importance des variables (feature importance) et comparaison inter-modèles
 
-**Objectif :**
-> Évaluer la qualité prédictive et la robustesse des résultats.
+Limites :
+- Variables post-game (gold, dégâts, CS) expliquent beaucoup mais induisent un biais d'interprétation (modèles explicatifs post-hoc)
+- Variables pré-game permettent des estimations probabilistes mais pas de prédiction parfaite
 
-#### Approche Expert IA / Machine Learning
-
-- **Entraînement de modèles** prédictifs
-- **Évaluation** (accuracy, precision, recall)
-- **Interprétation des prédictions**
-
-**Objectif :**
-> Construire un modèle capable de transformer les données de jeu en outil d'aide à la décision.
+Objectif final :
+> Obtenir un classement quantifié des facteurs de victoire et des modèles probabilistes d'aide à la décision.
 
 ---
+
+# Phase III — Draft et contre-stratégies (analyse pré-game)
+
+Objectif :
+- Analyser l’impact des choix pré-game (champion, lane, matchup, rank, patch) sur la victoire, sans utiliser les statistiques post-game.
+
+Question de recherche
+> Quels champions réduisent significativement le taux de victoire d'un champion donné ?
+
+Actions :
+- Analyse des matchups fréquents (Champion vs EnemyChampion par lane)
+- Calcul des winrates champion contre champion (filtrer par volume minimal)
+- Analyse relative (delta à la moyenne de la lane) pour identifier vrais counters
+- Construction de tableaux de counters et identification des matchups défavorables
+
+Objectif :
+> Construire des tableaux de counters et identifier les matchups défavorables.

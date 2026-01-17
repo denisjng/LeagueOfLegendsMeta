@@ -24,8 +24,8 @@ Ce dataset contient des données complètes sur les matchs de League of Legends,
 Table de référence contenant la liste de **tous les champions jouables** dans League of Legends. Cette table sert de table de lookup pour identifier les champions par leurs identifiants numériques uniques.
 
 ### Taille du Fichier
-- **Nombre de lignes** : 175 champions
-- **Nombre de colonnes** : 2
+- **Nombre de lignes** : 172 champions
+- **Nombre de colonnes** : 3
 
 ### Structure Détaillée des Colonnes
 
@@ -38,10 +38,10 @@ Table de référence contenant la liste de **tous les champions jouables** dans 
 ### Observations Clés
 - Le champion avec ID `0` ("No Champion") est un enregistrement spécial utilisé pour les matchs ARAM ou pour indiquer l'absence de champion
 - Les IDs ne sont **pas consécutifs** (on trouve `0`, `1`, `2`, `3`, ..., `50`, `51`, mais `46`, `47`, `49` manquent) car le jeu a supprimé ou changé certains champions au fil des années
-- Total d'environ **175 champions** jouables (le jeu ajoute régulièrement de nouveaux champions)
+- Total d'environ **172 champions** jouables (le jeu ajoute régulièrement de nouveaux champions)
 - Les noms suivent une convention de nommage spécifique (pas d'espaces, noms composés en CamelCase)
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 - **Table de référence** pour tous les autres fichiers utilisant les IDs de champions
 - **Jointure obligatoire** pour obtenir les noms lisibles à partir des IDs numériques
 - Permet d'analyser **les préférences des champions** par rôle, par rang, ou par patch
@@ -69,13 +69,11 @@ Table de référence contenant **tous les objets (items) du jeu**. Les objets so
 - Les IDs ne sont **pas consécutifs** (1001, 1004, 1006, 1011, 1018...)
 - Inclut:
   - **Objets de base** : Boots, Ruby Crystal (composants simples)
-  - **Objets finaux** : Items complètement construits (ex: BF Sword)
+  - **Objets finaux** : Items complètement construits (ex: Infinity Edge)
   - **Objets spéciaux** : Certains objets spécifiques aux modes de jeu (ex: Turret Plating avec ID 1515)
   - **Objets invalides/obsolètes** : Certains IDs renvoient à des objets qui ne sont plus en jeu ou à des valeurs corrompues
-- Certains noms semblent anormaux (ex: `Mosstomper Seedling`, `Gustwalker Hatchling`) indiquant des objets exotiques ou temporaires
-- Des IDs élevés (1500-1600) qui semblent être des modifications ou des objets spéciaux
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 - **Table de référence** pour les objets équipés par les joueurs (dans MatchStatsTbl)
 - Permet d'identifier **les builds (combinaisons d'objets) les plus populaires**
 - Analyse des **préférences d'objets par champion ou par rôle**
@@ -120,7 +118,7 @@ Table de référence contenant les **rangs de classement (divisions)** du systè
 - Les rangs **Unranked** (0) incluent les matchs en mode non-classé (ARAM, modes spéciaux)
 - Chaque rang (excepté Master, Grandmaster et Challenger) est subdivisé en **4 sous-divisions (tiers)** : IV, III, II, I (mais ces sous-divisions ne sont pas stockées dans cette table)
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 - **Table de référence** pour filtrer les matchs par niveau de compétition
 - **Analyse comparative** : voir comment la méta change selon le rang
 - **Filtrage** des matchs classés vs non-classés
@@ -166,7 +164,7 @@ Table **centrale** contenant **tous les matchs du dataset**. Chaque ligne repré
 - Jointure avec **RankTbl** via RankId pour obtenir le nom du rang
 - Jointure avec **MatchStatsTbl** via SummonerMatchTbl
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 - **Base de tous les analyses** sur les matchs
 - **Calcul de statistiques** : taux de victoire par patch, durée moyenne par mode
 - **Analyse temporelle** : évolution de la méta entre patches
@@ -207,7 +205,7 @@ Table **d'association joueur-match** qui établit le **lien entre les invocateur
 - **Clé étrangère vers ChampionTbl** : joindre via ChampionFk = ChampionTbl.ChampionId
 - **Lié à MatchStatsTbl** via SummonerMatchId
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 - **Identification des champions joués** dans chaque match
 - **Analyse des champions** : quelle équipe (Blue/Red) joue quel champion
 - **Jointure essentielle** pour accéder aux statistiques détaillées via MatchStatsTbl
@@ -328,7 +326,7 @@ Pour identifier les noms: joindre avec ItemTbl sur chaque ItemID
    - Runes pour certains matchs contiennent `0` (absent ou non renseigné)
    - Some minions killed = 0 pour des non-carries (supports)
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 - **Analyse de performance** : wins/loss corrélés à kills, farming, dégâts
 - **Analyse des builds** : quels items construisent les joueurs sur quel champion
 - **Analyse des runes** : Keystones populaires par matchups
@@ -426,7 +424,7 @@ Table contenant les **statistiques au niveau d'équipe pour chaque match**. Chaq
 - **Jointure avec MatchTbl** : via MatchFk = MatchTbl.MatchId
 - **Jointure avec ChampionTbl** : via B1Champ-B5Champ et R1Champ-R5Champ
 
-### Utilité dans l'Analyse
+### Possible utilité dans l'analyse
 
 1. **Analyse au niveau équipe** :
    - Taux de victoire basé sur compositions (quels 5 champions ensemble gagnent)
@@ -495,23 +493,6 @@ MatchTbl
             ├─ JOIN ItemTbl ON ItemTbl.ItemID = MatchStatsTbl.item2
             └─ ... (pour tous les items)
 ```
-
----
-
-## 📊 Statistiques Globales du Dataset
-
-| Métrique | Valeur |
-|----------|--------|
-| **Nombre total de matchs** | 110,479 |
-| **Nombre total de joueurs-matchs** | 223,154 |
-| **Nombre de champions** | 175 |
-| **Nombre d'objets** | 637 |
-| **Nombre de rangs** | 11 |
-| **Durée moyenne des matchs** | ~25-30 minutes |
-| **Matchs ARAM** | ~30-40% (estimation) |
-| **Matchs CLASSIC** | ~60-70% (estimation) |
-| **Données couvrant** | Patch 14.23 à 15.13 (~1-2 mois de données) |
-| **Régions** | EUW1, EUN1 (Europe) |
 
 ---
 
